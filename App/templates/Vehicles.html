@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Vehículos</h2>
+<a href="{{ url_for('main.new_vehicle') }}">Agregar vehículo</a>
+<ul>
+ {% for v in vehicles %}
+   <li>{{ v.plate }} - {{ v.client.name }}</li>
+ {% else %}
+   <li>No hay vehículos.</li>
+ {% endfor %}
+</ul>
+{% endblock %}
