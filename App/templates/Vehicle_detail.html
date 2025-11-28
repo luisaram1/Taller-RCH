@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+{% if vehicle %}
+  <h3>Vehículo {{ vehicle.plate }}</h3>
+  <p>Cliente: {{ vehicle.client.name }}</p>
+  <h4>Reparaciones</h4>
+  <ul>
+    {% for r in vehicle.repairs %}
+      <li>{{ r.description }} - ${{ r.cost }} - {{ r.status }}</li>
+    {% endfor %}
+  </ul>
+  <h4>Añadir reparación</h4>
+{% else %}
+  <h3>Crear nuevo vehículo</h3>
+{% endif %}
+<form method="POST">
+  {{ form.hidden_tag() }}
+  {% if not vehicle %}
+    <p>{{ form.plate.label }} {{ form.plate() }}</p>
+    <p>{{ form.brand.label }} {{ form.brand() }}</p>
+    <p>{{ form.model.label }} {{ form.model() }}</p>
+    <p>{{ form.client_id.label }} {{ form.client_id() }}</p>
+    <p>{{ form.submit() }}</p>
+  {% else %}
+    <p>{{ form.description.label }} {{ form.description() }}</p>
+    <p>{{ form.cost.label }} {{ form.cost() }}</p>
+    <p>{{ form.submit() }}</p>
+  {% endif %}
+</form>
+{% endblock %}
