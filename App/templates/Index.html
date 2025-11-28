@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<ul>
+  {% for v in vehicles %}
+    <li>{{ v.plate }} - {{ v.client.name }} - <a href="{{ url_for('main.vehicle_detail', vid=v.id) }}">Ver</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
