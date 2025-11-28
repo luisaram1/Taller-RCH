@@ -1,5 +1,5 @@
 # Taller RCH - Flask (Básico)
-Proyecto de ejemplo — sistema de seguimiento de reparaciones para taller automotriz.
+Sistema de seguimiento de reparaciones para taller automotriz.
 
 Instalación:
 1. python -m venv venv
