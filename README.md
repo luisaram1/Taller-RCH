@@ -1,6 +1,3 @@
-# Taller RCH - Flask (Básico)
-Sistema de seguimiento de reparaciones para taller automotriz.
-
 # Historias de Usuario
 
 Las historias de usuario del proyecto fueron registradas en la sección Issues del repositorio.
@@ -14,6 +11,8 @@ Las historias de usuario del proyecto fueron registradas en la sección Issues d
 Ver historias completas en:
 https://github.com/luisaram1/Taller-RCH/issues
 
+# Taller RCH - Flask (Básico)
+Sistema de seguimiento de reparaciones para taller automotriz.
 
 Instalación:
 1. python -m venv venv
